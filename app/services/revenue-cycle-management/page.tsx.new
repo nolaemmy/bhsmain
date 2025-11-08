@@ -1,0 +1,228 @@
+"use client";
+
+import Link from "next/link";
+import { ArrowLeft, CheckCircle } from "lucide-react";
+import Image from "next/image";
+
+export default function RevenueCycleManagementPage() {
+    const rcmSolutions = [
+        {
+            title: "Provider Enrollment / Credentialing",
+            icon: "🏥",
+            href: "/services/provider-enrollment"
+        },
+        {
+            title: "Medical Coding",
+            icon: "🔍",
+            href: "/services/medical-coding"
+        },
+        {
+            title: "Patient Demographics",
+            icon: "👥",
+            href: "/services/patient-demographics"
+        },
+        {
+            title: "Eligibility",
+            icon: "✓",
+            href: "/services/eligibility"
+        },
+        {
+            title: "Charge Capture",
+            icon: "💰",
+            href: "/services/charge-capture"
+        },
+        {
+            title: "Payment Posting",
+            icon: "💳",
+            href: "/services/payment-posting"
+        },
+        {
+            title: "Accounts Receivable",
+            icon: "📊",
+            href: "/services/accounts-receivable"
+        }
+    ];
+
+    const workflowSteps = [
+        {
+            title: "Patient Registration",
+            description: "Accurate collection and verification of patient information and insurance details",
+            icon: "👥"
+        },
+        {
+            title: "Insurance Verification",
+            description: "Real-time eligibility checks and benefit verification",
+            icon: "✓"
+        },
+        {
+            title: "Clinical Documentation",
+            description: "Complete and accurate documentation of all medical services",
+            icon: "📋"
+        },
+        {
+            title: "Charge Capture",
+            description: "Efficient capture and validation of all billable services",
+            icon: "💰"
+        },
+        {
+            title: "Claims Submission",
+            description: "Clean claim submission with minimal errors",
+            icon: "📤"
+        },
+        {
+            title: "Payment Processing",
+            description: "Quick and accurate payment posting and reconciliation",
+            icon: "💳"
+        },
+        {
+            title: "Denial Management",
+            description: "Proactive denial prevention and efficient appeals process",
+            icon: "⚠️"
+        }
+    ];
+
+    return (
+        <div>
+            <section className="relative py-16 md:py-24 bg-gradient-to-br from-primary/90 to-primary/60 overflow-hidden">
+                <div className="absolute inset-0 bg-grid-white/10 bg-[size:20px_20px]" />
+                <div className="absolute inset-0 opacity-10">
+                    <div className="absolute inset-0 bg-[url('/placeholder.jpg')] bg-no-repeat bg-right bg-contain" />
+                </div>
+                <div className="container relative">
+                    <Link href="/services" className="inline-flex items-center text-white/90 hover:text-white mb-8 group">
+                        <ArrowLeft className="h-4 w-4 mr-2 transition-transform group-hover:-translate-x-1" />
+                        Back to Services
+                    </Link>
+                    <div className="max-w-4xl">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                            Revenue Cycle Management
+                        </h1>
+                        <p className="text-xl text-white/90 max-w-3xl">
+                            Optimize your healthcare organization's financial performance with our comprehensive revenue cycle management solutions.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section className="py-12 bg-gradient-to-b from-primary/5 to-white">
+                <div className="container">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="bg-white p-6 rounded-xl shadow-md text-center">
+                            <div className="text-4xl font-bold text-primary mb-2">98%</div>
+                            <p className="text-gray-600">Clean Claims Rate</p>
+                        </div>
+                        <div className="bg-white p-6 rounded-xl shadow-md text-center">
+                            <div className="text-4xl font-bold text-primary mb-2">45</div>
+                            <p className="text-gray-600">Days in A/R</p>
+                        </div>
+                        <div className="bg-white p-6 rounded-xl shadow-md text-center">
+                            <div className="text-4xl font-bold text-primary mb-2">15%</div>
+                            <p className="text-gray-600">Revenue Increase</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="py-16 md:py-24">
+                <div className="container">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                        <div className="lg:col-span-2">
+                            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                                Comprehensive RCM Solutions
+                            </h2>
+                            <div className="prose prose-lg max-w-none">
+                                <p>
+                                    Our end-to-end revenue cycle management services help healthcare providers maximize revenue, reduce costs, and improve patient satisfaction.
+                                </p>
+                                <div className="mt-12">
+                                    <h3 className="text-2xl font-bold mb-8">RCM Workflow Process</h3>
+                                    <div className="grid gap-6">
+                                        {workflowSteps.map((step, index) => (
+                                            <div key={index} className="flex items-start bg-gray-50 p-6 rounded-xl">
+                                                <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                                                    <span className="text-2xl">{step.icon}</span>
+                                                </div>
+                                                <div>
+                                                    <h4 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h4>
+                                                    <p className="text-gray-600">{step.description}</p>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <div className="mt-12 pt-12 border-t border-gray-200">
+                                    <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
+                                        Our Healthcare RCM Solutions
+                                    </h2>
+                                    <div className="relative">
+                                        <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl opacity-50" />
+                                        <div className="relative overflow-x-auto">
+                                            <div className="flex space-x-6 py-8 px-4 min-w-max">
+                                                {rcmSolutions.map((solution, index) => (
+                                                    <div key={index} className="w-44 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                                                        <div className="p-4 text-center">
+                                                            <div className="mx-auto w-12 h-12 bg-gray-50 rounded-lg flex items-center justify-center mb-3">
+                                                                <span className="text-2xl">{solution.icon}</span>
+                                                            </div>
+                                                            <h3 className="text-sm font-medium text-gray-900 mb-3 min-h-[40px]">
+                                                                {solution.title}
+                                                            </h3>
+                                                            <Link
+                                                                href={solution.href}
+                                                                className="inline-flex items-center justify-center w-full px-3 py-2 text-sm font-medium text-white bg-primary rounded-lg hover:bg-primary-dark transition-colors duration-200"
+                                                            >
+                                                                View details
+                                                            </Link>
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="lg:col-span-1">
+                            <div className="bg-gray-50 p-6 rounded-lg sticky top-24">
+                                <h3 className="text-xl font-bold text-gray-900 mb-6">
+                                    Benefits of Our RCM Services
+                                </h3>
+                                <ul className="space-y-6">
+                                    <li className="flex items-start">
+                                        <div className="flex-shrink-0 p-1">
+                                            <div className="h-5 w-5 bg-primary/10 text-primary rounded-full flex items-center justify-center">✓</div>
+                                        </div>
+                                        <div className="ml-3">
+                                            <h4 className="text-base font-medium text-gray-900">Increased Revenue</h4>
+                                            <p className="mt-1 text-sm text-gray-500">Maximize collections through optimized processes</p>
+                                        </div>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <div className="flex-shrink-0 p-1">
+                                            <div className="h-5 w-5 bg-primary/10 text-primary rounded-full flex items-center justify-center">✓</div>
+                                        </div>
+                                        <div className="ml-3">
+                                            <h4 className="text-base font-medium text-gray-900">Reduced Costs</h4>
+                                            <p className="mt-1 text-sm text-gray-500">Lower operational costs through automation</p>
+                                        </div>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <div className="flex-shrink-0 p-1">
+                                            <div className="h-5 w-5 bg-primary/10 text-primary rounded-full flex items-center justify-center">✓</div>
+                                        </div>
+                                        <div className="ml-3">
+                                            <h4 className="text-base font-medium text-gray-900">Improved Efficiency</h4>
+                                            <p className="mt-1 text-sm text-gray-500">Streamlined processes and reduced burden</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    );
+}

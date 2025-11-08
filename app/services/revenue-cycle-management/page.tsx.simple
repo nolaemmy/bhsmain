@@ -1,0 +1,15 @@
+import Link from "next/link";
+
+export default function RevenueCycleManagementPage() {
+  return (
+    <div className="container mx-auto py-12">
+      <h1 className="text-3xl font-bold mb-6">Revenue Cycle Management</h1>
+      <p className="mb-4">
+        Optimize your healthcare organization's financial performance with our comprehensive revenue cycle management solutions.
+      </p>
+      <Link href="/services" className="text-primary hover:underline">
+        Back to Services
+      </Link>
+    </div>
+  );
+}
